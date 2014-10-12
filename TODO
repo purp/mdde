@@ -1,0 +1,6 @@
+TODO
+===
+
+* Clean up output of Dockerfile build
+* tune user creation to include explicit homedir, etc.
+* parameterize the unpriv'd user
