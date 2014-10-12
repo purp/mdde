@@ -6,7 +6,7 @@
 FROM purp/docker-oracle-java7
 MAINTAINER Jim Meyer <purp@acm.org>
 
-RUN apt-get install git openssh-server
+RUN apt-get -y install openssh-server
 
 # From http://www.florentflament.com/blog/git-ssh-docker-container.html
 # Setting openssh
