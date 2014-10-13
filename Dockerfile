@@ -13,7 +13,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get -y install openssh-server
 RUN mkdir /var/run/sshd && sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config
 
 # Adding unprivileged user
-RUN adduser purp && mkdir -p -m755 /home/purp/.ssh && chown -R purp.purp /home/purp
+RUN adduser purp && chown -R purp:purp /home/purp && mkdir -p -m700 /home/purp/.ssh
 RUN echo 'purp ALL=(ALL:ALL) ALL' >> /etc/sudoers
 
 # Clearing and setting authorized ssh keys
